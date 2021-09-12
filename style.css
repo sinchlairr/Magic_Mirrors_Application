@@ -1,0 +1,184 @@
+body{
+  overflow: hidden;
+  /* background-color: #ffffff; */
+  background-image: url(imgs/waterblue_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+canvas {
+  /* border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+
+  width: 100vw;
+  left: 6vw;
+  top: 12vh; */
+
+  z-index: 100;
+  border-radius: 50px;
+  position: absolute;
+  width: 40vw;
+  left: 6vw;
+  top: 10vh;
+}
+
+#mirror-div{
+    height: 97vh;
+    width: 48vw;
+    /* background-color: white; */
+    /* background-color: #dde7c7; */
+    /* background-color: #e0d100; */
+    /* background-color: #97011a; */
+    border-radius: 30px;
+}
+
+#text-div{
+    height: 97vh;
+    width: 48vw;
+    /* background-image: url(imgs/white_shader.png); */
+    background-size: auto;
+    border-radius: 30px;
+    position: absolute;
+    left: 51vw;
+    top: 1.5vh;
+    /* border: #2b108c; */
+    /* border-width: 2vw; */
+}
+#rhyme{
+  position: absolute;
+  left: 3vw;
+  top: 20vh;
+  line-height: 1.2;
+  font-family: 'My Kids Handwritten';
+  font-weight: bold;
+  font-size: 2.4vw;
+  text-align: center;
+  color: #2b108c;
+  z-index: 10;
+  /* visibility: none; */
+}
+
+  #text.fade{
+    visibility: hidden;
+}
+
+  #flr1{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 64vh;
+    left: 5vw;
+    animation: rot 15s infinite;
+  }
+  #flr22{
+    z-index: 12;
+    width: 6vw;
+    position: absolute;
+    top: 69vh;
+    left: 12vw;
+    animation: rot 15s infinite;
+  }
+  
+  @keyframes rot {
+    50%{
+      transform: rotateZ(90deg);
+    }
+  }
+  
+  
+  #flr2{
+    z-index: 12;
+    width: 5.5vw;
+    position: absolute;
+    top: 63vh;
+    left: 27vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr13{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 64vh;
+    left: 35vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr23{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 71vh;
+    left: 41vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr24{
+    z-index: 12;
+    width: 4vw;
+    position: absolute;
+    top: 76vh;
+    left: 0vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr12{
+    z-index: 12;
+    width: 4vw;
+    position: absolute;
+    top: 64vh;
+    left: 20vw;
+    animation: rot 16s infinite;
+  }
+  
+  @keyframes rot {
+    70%{
+      transform: rotateZ(-90deg);
+    }
+  }
+
+
+  #cld1{
+    animation: clds 5s infinite ease-in;
+  } 
+  
+  #cld2{
+    animation: clds 7s infinite ease-in;
+  }
+  
+  #cld3{
+    animation: clds 9s infinite ease-in;
+  }
+
+  @keyframes clds {
+    50%{
+      transform: translateX(1vw);
+    }
+  }
+
+  @keyframes shake {
+    0%{
+      transform: translate(0);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+      /* transform: translate(.8em); */
+      transform: rotate(43deg);
+      /* box-shadow: 0px 6px 20px rgba(0,0,0,0.5); */
+    }
+    10%,
+    30%,
+    50%{
+      transform: translate(-0.2em);
+    }
+    70%,
+    100%{
+      transform: translate(0);
+    }
+  
+  
+  }

@@ -1,0 +1,314 @@
+body{
+  overflow: hidden;
+  /* background-color: #ffffff; */
+  background-image: url(imgs/waterblue_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+/* #btn:hover{
+  left: 20vw;
+  background-image: url('imgs/dark-wooden_button.png');
+} */
+
+/* #btn{
+  background-image: url('imgs/wood-button.png');
+} */
+
+canvas {
+  border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+  /* border: #2b108c;
+  border-width: 1vw; */
+  /* visibility: hidden; */
+  width: 100vw;
+  left: 6vw;
+  top: 12vh;
+}
+
+#mirror-div{
+    height: 97vh;
+    width: 48vw;
+    /* background-color: white; */
+    /* background-color: #dde7c7; */
+    /* background-color: #e0d100; */
+    /* background-color: #97011a; */
+    border-radius: 30px;
+}
+
+#text-div{
+    height: 97vh;
+    width: 48vw;
+    /* background-image: url(imgs/white_shader.png); */
+    background-size: auto;
+    border-radius: 30px;
+    position: absolute;
+    left: 51vw;
+    top: 1.5vh;
+    /* border: #2b108c; */
+    /* border-width: 2vw; */
+}
+#rhyme_two{
+  position: absolute;
+  left: 4vw;
+  top: 26vh;
+  line-height: 1.2;
+  font-family: 'My Kids Handwritten';
+  font-weight: bold;
+  font-size: 2.4vw;
+  text-align: center;
+  color: #2b108c;
+  z-index: 10;
+  /* visibility: none; */
+}
+
+
+#rhyme_fat{
+    position: absolute;
+    left: 8.5vw;
+    top: 26vh;
+    line-height: 1.2;
+    font-family: 'My Kids Handwritten';
+    font-weight: bold;
+    font-size: 2.4vw;
+    text-align: center;
+    color: #2b108c;
+    z-index: 10;
+    /* visibility: none; */
+  }
+  
+  #rhyme_thin{
+    position: absolute;
+    left: 7vw;
+    top: 30vh;
+    line-height: 1.2;
+    font-family: 'My Kids Handwritten';
+    font-weight: bold;
+    font-size: 2.4vw;
+    text-align: center;
+    color: #2b108c;
+    z-index: 10;
+    /* visibility: none; */
+  }
+
+  #rhyme_small{
+    position: absolute;
+    left: 13vw;
+    top: 26vh;
+    line-height: 1.2;
+    font-family: 'My Kids Handwritten';
+    font-weight: bold;
+    font-size: 2.4vw;
+    text-align: center;
+    color: #2b108c;
+    z-index: 10;
+    /* visibility: none; */
+  }
+    
+  #rhyme_tall{
+    position: absolute;
+    left: 8vw;
+    top: 26vh;
+    line-height: 1.2;
+    font-family: 'My Kids Handwritten';
+    font-weight: bold;
+    font-size: 2.4vw;
+    text-align: center;
+    color: #2b108c;
+    z-index: 10;
+    /* visibility: none; */
+  }
+  
+  #rhyme_funny{
+    position: absolute;
+    left: 7.5vw;
+    top: 26vh;
+    line-height: 1.2;
+    font-family: 'My Kids Handwritten';
+    font-weight: bold;
+    font-size: 2.4vw;
+    text-align: center;
+    color: #2b108c;
+    z-index: 10;
+    /* visibility: none; */
+  }
+  
+  #ball.active{
+    animation-name: roll;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  #wipe.active{
+    /* animation-name: wipe;
+    animation-duration: 8s;
+    animation-fill-mode: forwards; */
+    animation: wipe 8s ease-in;
+  }
+  
+  @keyframes roll {
+    50%{
+      transform: rotateZ(90deg);
+    }
+    100%{
+      transform: translateX(40vw);
+    }
+  }
+  
+  @keyframes wipe {
+    20%{
+      transform:  translateX(40vw);
+    }
+    40%{
+      transform: translateX(5vw);
+    }
+    60%{
+      transform:  translateX(40vw);
+    }
+    80%{
+      transform: translateX(5vw);
+    }
+    100%{
+      transform: translateX(40vw);
+    }
+  }
+  
+
+
+  #text{
+    position: absolute;
+    /* color: #c00202; */
+    /* font-family: 'Caveat', cursive; */
+    
+    font-size: 2.5vw;
+    text-align: center;
+    /* left: 1vw; */
+    left: 9vw;
+    top: 24vh;
+    font-family: 'My Kids Handwritten';
+  
+  }
+  #text.fade{
+    visibility: hidden;
+}
+
+  #flr1{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 64vh;
+    left: 5vw;
+    animation: rot 15s infinite;
+  }
+  #flr22{
+    z-index: 12;
+    width: 6vw;
+    position: absolute;
+    top: 69vh;
+    left: 12vw;
+    animation: rot 15s infinite;
+  }
+  
+  @keyframes rot {
+    50%{
+      transform: rotateZ(90deg);
+    }
+  }
+  
+  
+  #flr2{
+    z-index: 12;
+    width: 5.5vw;
+    position: absolute;
+    top: 63vh;
+    left: 27vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr13{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 64vh;
+    left: 35vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr23{
+    z-index: 12;
+    width: 5vw;
+    position: absolute;
+    top: 71vh;
+    left: 41vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr24{
+    z-index: 12;
+    width: 4vw;
+    position: absolute;
+    top: 76vh;
+    left: 0vw;
+    animation: rot 11s infinite;
+  }
+  
+  #flr12{
+    z-index: 12;
+    width: 4vw;
+    position: absolute;
+    top: 64vh;
+    left: 20vw;
+    animation: rot 16s infinite;
+  }
+  
+  @keyframes rot {
+    70%{
+      transform: rotateZ(-90deg);
+    }
+  }
+
+
+  #cld1{
+    animation: clds 5s infinite ease-in;
+  } 
+  
+  #cld2{
+    animation: clds 7s infinite ease-in;
+  }
+  
+  #cld3{
+    animation: clds 9s infinite ease-in;
+  }
+
+  @keyframes clds {
+    50%{
+      transform: translateX(1vw);
+    }
+  }
+
+  @keyframes shake {
+    0%{
+      transform: translate(0);
+    }
+    20%,
+    40%,
+    60%,
+    80%{
+      /* transform: translate(.8em); */
+      transform: rotate(43deg);
+      /* box-shadow: 0px 6px 20px rgba(0,0,0,0.5); */
+    }
+    10%,
+    30%,
+    50%{
+      transform: translate(-0.2em);
+    }
+    70%,
+    100%{
+      transform: translate(0);
+    }
+  
+  
+  }

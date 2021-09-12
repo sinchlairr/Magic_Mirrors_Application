@@ -1,0 +1,191 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="button.css">
+    <link rel="stylesheet" href="hint.css">
+</head>
+<body>
+
+    <div id="hint-screen">
+        <img style="width: 50vw; position: absolute; left: 25vw;top: 10vh;" src="imgs/hint_board2.png">
+        <button id="hint-btn" onclick="hint_hide()" >OK</button>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+    <script src="script.js"></script>
+    <script src="voice.js"></script>
+    <script src="setup.js"></script>
+    <script src="bg_music.js"></script>
+    <!-- <embed name="GoodEnough" src="imgs/music.wav" loop="true" hidden="true" autostart="true"> -->
+ 
+<!-- MIRROR DECOR -->
+    <div id="mirror-div">
+        <canvas></canvas>
+        <!-- <img style="width:53vw; height: 100vh; position: absolute; z-index: 200;" src="imgs/wooden_frame.png"> -->
+        <img style="width:50vw; height: 100vh; position: absolute; z-index: 200; top: -2vh;" src="imgs/frame-4.png">
+        <!-- <img style="z-index: 10; width:48vw; height: 15vh; position: absolute;" src="imgs/creep_1.png">
+        <img style="z-index: 10;width:48vw;height: 15vh; position: absolute; top: 85vh;transform: rotateX(180deg);" src="imgs/creep_1.png">
+        <img style="z-index: 10;height: 97vh; position: absolute;" src="imgs/creep_2.png">
+        <img style="z-index: 10;height: 97vh; position: absolute; left: 44vw;" src="imgs/creep_2.png"> -->
+        <img id="hat" style=" position:absolute; width: 17vw; left:38vw; top: 1.5vh; z-index: 1000; transform: rotateZ(32deg);" src="imgs/hats.png">
+        <img id="click" style=" position:absolute; width: 19vw; left:36vw; top: 70vh; z-index: 1000; transform: rotateZ(0deg); opacity: 0;" src="imgs/snap.gif">
+        <img id="star" style="z-index: 30; position: absolute; width: 40vw; top: 0;  left: 0; opacity: 0;" src="imgs/starsgif.gif">
+        <img id="ball" style="z-index: 10000; position: absolute; width: 10vw; top: 70vh;  left: 0vw; opacity: 0;" src="imgs/ball2.png">
+        <img id="gir" style="z-index: 10000; position: absolute; width: 12vw; top: 65vh;  left: 38vw; opacity: 0;" src="imgs/gir.gif">
+        <img id="bunny" style="z-index: 10000; position: absolute; width: 8vw; top: 66vh;  left: 39vw; opacity: 0;" src="imgs/bunny.gif">
+        <img id="wipe" style="z-index: 10000; position: absolute; width: 8vw; top: 66vh;  left: 0vw; opacity: 0;" src="imgs/wipe.png">
+    </div>
+
+
+    <!-- BG DECOR -->
+        <img style="position: absolute; left: 0vw;top: 70vh; width: 50vw;" src="imgs/bushes_2.png">
+        <img style="position: absolute; left: 50vw;top: 70vh; width: 50vw; z-index: 1;" src="imgs/bushes_2.png">
+        <div id="text-div">
+        <img style="position: absolute; top: -30vh; " src="imgs/shader.png">
+        <img style="position: absolute; top: -70vh; " src="imgs/shader.png">
+        <img id="cld1" style="position: absolute; left: 2vw; top: 7vh; width: 15vw;" src="imgs/cld_1.png">
+        <img id="cld2" style="position: absolute; left: 32vw;top: 6vh; width: 15vw;" src="imgs/cld_1hor.png">
+        <img id="cld3" style="position: absolute; left: 17vw;top: 1vh; width: 15vw;" src="imgs/cld_2.png">
+        
+
+
+        <!-- RHYMES -->
+        <p id="text" style="opacity: 0;">
+            <span style="color: #c00202;">Ssshhhh! Ssshhhh! Chup chup!</span><br>
+            <span style="color: #860202;">To hear the whispered clue,</span><br>
+    
+            <span style="color: #c00202;"> you must shout the word,</span><br>
+            <span style="color: #860202;"><span style="color: #000000; font-size: 3vw;">PEEKABOO!!!!</span></span>
+        </p>
+        <div id="rhyme_fat" >
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Wriggle wriggle wriggle </span> <br> and adjust your hat 
+               <br> <span>Maybe the magician in the mirror<br> magically got fat </span></p>
+        </div>
+        
+        <div id="rhyme_thin" style="opacity: 0;">
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Click Click Click </span> <br> your fingers and touch your chin, 
+                <br> <span>The magician in the mirror <br>may have suddenly got thin </span></p>
+        </div>
+
+        <div id="rhyme_small" style="opacity: 0;">
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Roll Roll Roll </span> <br> like a ball 
+               <br> <span>Maybe the magician <br>just got small </span></p>
+        </div>
+
+        <div id="rhyme_tall" style="opacity: 0;">
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Run Run Run </span> <br> fast and stand against the wall 
+               <br> <span>The magician may have <br>just become tall</span></p>
+        </div>  
+
+        <div id="rhyme_funny" style="opacity: 0;">
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Scrunch Scrunch Scrunch </span> <br> up your nose my little bunny, 
+               <br> <span>Hahahhaahah!<br> Doesn't the magician <br>look really funny? </span></p>
+        </div>
+
+        <div id="rhyme_two" style="opacity: 0;">
+            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Wipe Wipe Wipe</span> <br> the flap of the mirror to clear the view, 
+               <br> <span>Is there <span style="color: #020746;">one </span>magician<br>or are there <span style="color: #020746;">two </span>?</span></p>
+        </div>
+
+
+        <div id="arrow" onclick="next_fun()">
+        <img style="position: absolute; left: 40vw; top: 41vh; width: 5vw; z-index: 8000; 
+        " src="imgs/wooden-arrow.png" >
+        </div>
+
+
+        <!-- FLOWERS -->
+        <img id="flr1" src="imgs/yellowflr.png">
+        <img id="flr12" src="imgs/yellowflr.png">
+        <img id="flr13" src="imgs/yellowflr.png">
+        <img id="flr2" src="imgs/pink_flower.png">
+        <img id="flr22" src="imgs/pink_flower.png">
+        <img id="flr23" src="imgs/pink_flower.png">
+        <img id="flr24" src="imgs/pink_flower.png">
+
+
+
+
+        <!-- BUTTONS -->
+        <button class="buttons"   style=" position: absolute; left: 2vw; top: 86vh;  
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover; z-index: 10000;" onclick="two()" >two</button>
+
+
+
+        <button class="buttons" id="btn_two"  style=" position: absolute; left: 2vw; top: 86vh;  
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+        background-position-y: -5px; background-size:cover; z-index: 20000;" onclick="two()">two</button>
+
+         
+         <button class="buttons" id="btn_fat" style="position: absolute; left: 9vw; top: 86vh; z-index: 2000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; 
+         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="small()" >fat</button>
+         
+         
+         <button class="buttons"  style="position: absolute; left: 9vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; 
+         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="small()" >fat</button>
+
+
+
+        <button class="buttons"  style="position: absolute; left: 16vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover;" onclick="thin()">thin</button>
+         
+         <button class="buttons" id="btn_thin" style="position: absolute; left: 16vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+         background-position-y: -5px; background-size:cover;z-index: 20000;" onclick="thin()">thin</button>
+
+
+        <button class="buttons"  style="position: absolute; left: 23vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover;" onclick="small()">small</button>
+         
+         <button class="buttons" id="btn_small" style="position: absolute; left: 23vw; top: 86vh; z-index: 2000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+         background-position-y: -5px; background-size:cover;z-index: 20000;" onclick="small()">small</button>
+
+
+        <button class="buttons"  style="position: absolute; left: 30vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover;" onclick="tall()">tall</button>
+         
+         <button class="buttons" id="btn_tall"  style="position: absolute; left: 30vw; top: 86vh; z-index: 2000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+         background-position-y: -5px; background-size:cover;z-index: 20000;" onclick="tall()">tall</button>
+
+        
+        <button class="buttons" style="position: absolute; left: 37vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover;" onclick="funny()">funny</button>
+
+        <button class="buttons" id="btn_funny" style="position: absolute; left: 37vw; top: 86vh; z-index: 1000; 
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+        font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
+         background-position-y: -5px; background-size:cover;" onclick="funny()">funny</button>
+
+        <img style="position: absolute; left: 0vw;top: 70vh; width: 50vw;" src="imgs/bushes_2.png">
+        <img style="position: absolute; left: 50vw;top: 70vh; width: 50vw; z-index: 1;;border: 0.2vw solid #024857;" src="imgs/bushes_2.png">
+    
+    </div>
+
+</body>
+</html>
