@@ -8,68 +8,87 @@
 </head>
 <body>
 
-    <!-- <audio id="tah_audio" src="imgs/front.mp3" loop="false"></audio> -->
+    <style type="text/css">
+        #warning-message { display: none; }
+        @media only screen and (orientation:portrait){
+            #wrapper { display:none; }
+            #warning-message { display:block; }
+        }
+        @media only screen and (orientation:landscape){
+            #warning-message { display:none; }
+        }
+    </style>
+    
+    <div id="wrapper">
+           <!-- <audio id="tah_audio" src="imgs/front.mp3" loop="false"></audio> -->
     <embed name="GoodEnough" src="imgs/music.wav" loop="false" hidden="true" autostart="true">
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
-    <script defer src="face-api.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
-    <script defer src="setup.js"></script>
-
- <!-- MIRROR DECOR -->
-    <div id="mirror-div">
-       
-        <video id="video" width="300px" height="300px" autoplay muted style="visibility: hidden; position: absolute;"></video>
-        <canvas id="canvas" width="300px" height="300px"></canvas>
-        <!-- <img style="width:53vw; height: 100vh; position: absolute; z-index: 200;" src="imgs/wooden_frame.png"> -->
-        <img style="width:50vw; height: 100vh; position: absolute; z-index: 200; top: -2vh;" src="imgs/frame-4.png">
-        <!-- <img style="z-index: 10; width:48vw; height: 15vh; position: absolute;" src="imgs/creep_1.png">
-        <img style="z-index: 10;width:48vw;height: 15vh; position: absolute; top: 85vh;transform: rotateX(180deg);" src="imgs/creep_1.png">
-        <img style="z-index: 10;height: 97vh; position: absolute;" src="imgs/creep_2.png">
-        <img style="z-index: 10;height: 97vh; position: absolute; left: 44vw;" src="imgs/creep_2.png"> -->
- </div>
-
-
-    <!-- BG DECOR -->
-        <img style="position: absolute; left: 0vw;top: 70vh; width: 50vw;height: 30vh;" src="imgs/bushes_2.png">
-        <img style="position: absolute; left: 50vw;top: 70vh; width: 50vw; z-index: 1;height: 30vh;" src="imgs/bushes_2.png">
-        <div id="text-div">
-        <img id="cld1" style="position: absolute; left: 2vw; top: 7vh; width: 15vw;" src="imgs/cld_1.png">
-        <img id="cld2" style="position: absolute; left: 32vw;top: 6vh; width: 15vw;" src="imgs/cld_1hor.png">
-        <img id="cld3" style="position: absolute; left: 17vw;top: 1vh; width: 15vw;" src="imgs/cld_2.png">
-        
-
-
-        <!-- RHYMES -->
-
-        <div id="rhyme" style="opacity: 1;">
-            <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Hello little Magician! </span> <br> Look, look, look at the mirror and smile Wide! 
-               <br> <span>You can do Magic! <br>Let the mirrors be your guide </span></p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
+        <script defer src="face-api.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+        <script defer src="setup.js"></script>
+    
+     <!-- MIRROR DECOR -->
+        <div id="mirror-div">
+           
+            <video id="video" width="300px" height="300px" autoplay muted style="visibility: hidden; position: absolute;"></video>
+            <canvas id="canvas" width="300px" height="300px"></canvas>
+            <!-- <img style="width:53vw; height: 100vh; position: absolute; z-index: 200;" src="imgs/wooden_frame.png"> -->
+            <img style="width:50vw; height: 100vh; position: absolute; z-index: 200; top: -2vh;" src="imgs/frame-4.png">
+            <!-- <img style="z-index: 10; width:48vw; height: 15vh; position: absolute;" src="imgs/creep_1.png">
+            <img style="z-index: 10;width:48vw;height: 15vh; position: absolute; top: 85vh;transform: rotateX(180deg);" src="imgs/creep_1.png">
+            <img style="z-index: 10;height: 97vh; position: absolute;" src="imgs/creep_2.png">
+            <img style="z-index: 10;height: 97vh; position: absolute; left: 44vw;" src="imgs/creep_2.png"> -->
+     </div>
+    
+    
+        <!-- BG DECOR -->
+            <img style="position: absolute; left: 0vw;top: 70vh; width: 50vw;height: 30vh;" src="imgs/bushes_2.png">
+            <img style="position: absolute; left: 50vw;top: 70vh; width: 50vw; z-index: 1;height: 30vh;" src="imgs/bushes_2.png">
+            <div id="text-div">
+            <img id="cld1" style="position: absolute; left: 2vw; top: 7vh; width: 15vw;" src="imgs/cld_1.png">
+            <img id="cld2" style="position: absolute; left: 32vw;top: 6vh; width: 15vw;" src="imgs/cld_1hor.png">
+            <img id="cld3" style="position: absolute; left: 17vw;top: 1vh; width: 15vw;" src="imgs/cld_2.png">
+            
+    
+    
+            <!-- RHYMES -->
+    
+            <div id="rhyme" style="opacity: 1;">
+                <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Hello little Magician! </span> <br> Look, look, look at the mirror and smile Wide! 
+                   <br> <span>You can do Magic! <br>Let the mirrors be your guide </span></p>
+            </div>
+            
+    
+    
+    
+            <a href="main/index.html">
+            <img style="position: absolute; left: 20vw; top: 50vh; width: 7vw; z-index: 8000; 
+            " src="imgs/play_button.png" >
+            </a>
+    
+    
+            <!-- FLOWERS -->
+            <img id="flr1" src="imgs/yellowflr.png">
+            <img id="flr12" src="imgs/yellowflr.png">
+            <img id="flr13" src="imgs/yellowflr.png">
+            <img id="flr2" src="imgs/pink_flower.png">
+            <img id="flr22" src="imgs/pink_flower.png">
+            <img id="flr23" src="imgs/pink_flower.png">
+            <img id="flr24" src="imgs/pink_flower.png">
+    
+     
         </div>
-        
-
-
-
-        <a href="main/index.html">
-        <img style="position: absolute; left: 20vw; top: 50vh; width: 7vw; z-index: 8000; 
-        " src="imgs/play_button.png" >
-        </a>
-
-
-        <!-- FLOWERS -->
-        <img id="flr1" src="imgs/yellowflr.png">
-        <img id="flr12" src="imgs/yellowflr.png">
-        <img id="flr13" src="imgs/yellowflr.png">
-        <img id="flr2" src="imgs/pink_flower.png">
-        <img id="flr22" src="imgs/pink_flower.png">
-        <img id="flr23" src="imgs/pink_flower.png">
-        <img id="flr24" src="imgs/pink_flower.png">
+        <!-- your html for your website -->
+    </div>
+    <div id="warning-message">
+        this website is only viewable in landscape mode
+    </div>
 
  
-    </div>
 
 </body>
 </html>
