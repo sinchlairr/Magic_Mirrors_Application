@@ -1,3 +1,14 @@
+@font-face {
+  font-family: My Kids Handwritten;
+  src: url(main/fonts/MyKidsHandwritten-8MZrn.otf);
+}
+
+
+@font-face {
+  font-family: Handylinedfont;
+  src: url(main/fonts/Handylinedfont.ttf);
+}
+
 body{
   overflow: hidden;
   /* background-color: #ffffff; */
