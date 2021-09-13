@@ -13,7 +13,7 @@ let img;
 let vid;
 let theta = 0;
 let cam;
-var fat_start = true;
+var fat_start = false;
 var fat_show = false;
 var small_start = false;
 var small_show = false;
@@ -123,7 +123,7 @@ function reset_btn(){
 
 
 function next_fun(){
-
+  console.log("clicked");
   document.getElementById('arrow').style.opacity=0;
   var birdSound = new Audio('imgs/aud.mp3');
   birdSound.loop = false;
@@ -305,7 +305,9 @@ function windowResized() {
 }
 
 function hint_hide(){
-  document.getElementById("hint-screen").style.opacity=0;
+  document.getElementById("hint-screen").style.display='none';
+  fat_start=true;
+  music();
 }
 
 
