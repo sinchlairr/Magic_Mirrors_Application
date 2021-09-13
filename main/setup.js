@@ -19,7 +19,7 @@ function setup() {
   
     background(250);
     noStroke();
-    translate(2, 0, -0.1 * windowWidth);
+    translate(2, 0, -0.05 * windowWidth);
     push();
     rotateY(22);
     // rotateX(2.7);
