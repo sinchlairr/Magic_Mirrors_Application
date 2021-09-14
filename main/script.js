@@ -125,7 +125,7 @@ function reset_btn(){
 function next_fun(){
   console.log("clicked");
   document.getElementById('arrow').style.opacity=0;
-  var birdSound = new Audio('imgs/aud.mp3');
+  var birdSound = new Audio('imgs/peekaboo.mp3');
   birdSound.loop = false;
   birdSound.play();
 
