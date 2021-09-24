@@ -29,13 +29,12 @@ const detectFaces = async() =>{
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.strokeStyle = "blue";
-        ctx.drawImage(base_image,pred.topLeft[0]-120,pred.topLeft[1]-160, 100, 80);
+        ctx.drawImage(base_image,pred.topLeft[0]-0.45*pred.topLeft[1],pred.topLeft[1]-0.9*pred.topLeft[1], 110, 100);
         // ctx.rect(
-        //     pred.topLeft[0],
-        //     pred.topLeft[1],
-        //     5,5
-        //     // pred.bottomRight[0] - pred.topLeft[0],
-        //     // pred.bottomRight[1] - pred.topLeft[1],
+        //     pred.topLeft[0]-0.8*pred.topLeft[1],pred.topLeft[1]-pred.topLeft[1],
+        //     // 5,5,
+        //     pred.bottomRight[0] - pred.topLeft[0],
+        //     pred.bottomRight[1] - pred.topLeft[1],
 
         // );
         // ctx.stroke();
