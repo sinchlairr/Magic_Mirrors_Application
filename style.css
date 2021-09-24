@@ -31,6 +31,7 @@ canvas {
   border-radius: 50px;
   position: absolute;
   width: 40vw;
+  height: 85vh;
   left: 6vw;
   top: 10vh;
 }
