@@ -193,3 +193,15 @@ canvas {
   
   
   }
+
+
+  #play-btn{
+    animation: zoom 4s infinite;
+  }
+
+  @keyframes zoom {
+    50%{
+      width: 8vw;
+      left: 19vw;
+    }
+  }

@@ -98,9 +98,12 @@ function setup() {
 
 
   else if (funny_show){
+    console.log(windowWidth);
     background(250);
     noStroke();
-    translate(-75, 0, 10);
+    // translate(-0.01*windowWidth, 0, 10);
+    // translate(0.005*windowWidth, -50, 0.1*windowWidth);
+    translate(0.005*windowWidth, -50,0.2*windowWidth);
     push();
     rotateY(16);
     rotateX(2);
@@ -118,12 +121,14 @@ function setup() {
     push();
     // translate(-100,-100);
     // scale(-1, 1);
-    image(vid, -280, -280, 0.39*windowWidth/2,0.8*windowHeight);
+    image(vid, -0.18*windowWidth, -0.29*windowWidth, 0.4*windowWidth/2,windowHeight);
+    // image(vid, -280, -280, 0.39*windowWidth/2,0.8*windowHeight);
     pop();
     push();
     translate(width,0);
     scale(-1, 1);
-    image(vid, 280, -280, 0.39*windowWidth/2, 0.8*windowHeight);
+    image(vid, 0.17*windowWidth, -0.29*windowWidth, 0.4*windowWidth/2, windowHeight);
+    // image(vid, 280, -280, 0.39*windowWidth/2, 0.8*windowHeight);
     pop();
   }
   

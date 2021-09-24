@@ -2,3 +2,13 @@
     background-image: url('imgs/wood-button.png');
 }
 
+#arrow-btn{
+    animation: zoom 4s infinite;
+}
+
+@keyframes zoom {
+    50%{
+        /* width: 5.5w; */
+        left: 41vw;
+    }
+}

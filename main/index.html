@@ -1,5 +1,14 @@
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6038BRWJV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6038BRWJV');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,7 +106,7 @@
 
 
         <div id="arrow" onclick="next_fun()">
-        <img style="position: absolute; left: 40vw; top: 41vh; width: 5vw; z-index: 100000; 
+        <img id="arrow-btn" style="position: absolute; left: 40vw; top: 41vh; width: 5vw; z-index: 100000; 
         " src="imgs/wooden-arrow.png" >
         </div>
 
@@ -131,13 +140,13 @@
          <button class="buttons" id="btn_fat" style="position: absolute; left: 9vw; top: 86vh; z-index: 2000; 
         background-color: transparent; border: 0; width: 5vw; height: 6vh; 
          font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
-         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="small()" >fat</button>
+         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="fat()" >fat</button>
          
          
          <button class="buttons"  style="position: absolute; left: 9vw; top: 86vh; z-index: 1000; 
         background-color: transparent; border: 0; width: 5vw; height: 6vh; 
          font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
-         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="small()" >fat</button>
+         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="fat()" >fat</button>
 
 
 

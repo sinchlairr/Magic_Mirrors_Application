@@ -1,5 +1,14 @@
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B6038BRWJV"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-B6038BRWJV');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +38,7 @@
         <script defer src="face-api.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
-        <script defer src="setup.js"></script>
+        <!-- <script defer src="setup.js"></script> -->
     
      <!-- MIRROR DECOR -->
         <div id="mirror-div">
@@ -66,7 +75,7 @@
     
     
             <a href="main/index.html">
-            <img style="position: absolute; left: 20vw; top: 50vh; width: 7vw; z-index: 8000; 
+            <img onmouseenter ="fade()" onmouseout="no_fade()" id="play-btn" style="position: absolute; left: 20vw; top: 50vh; width: 6.6vw; z-index: 8000; 
             " src="imgs/play_button.png" >
             </a>
     
@@ -80,7 +89,7 @@
             <img id="flr23" src="imgs/pink_flower.png">
             <img id="flr24" src="imgs/pink_flower.png">
     
-     ss
+
         </div>
         <!-- your html for your website -->
     </div>
@@ -88,7 +97,15 @@
         this website is only viewable in landscape mode
     </div>
 
- 
+    <script>
+        function fade(){
+            document.getElementById("play-btn").style.opacity=0.8;
+        }
+
+        function no_fade(){
+            document.getElementById("play-btn").style.opacity=1;
+        }
+    </script>
 
 </body>
 </html>
