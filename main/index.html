@@ -16,8 +16,22 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="button.css">
     <link rel="stylesheet" href="hint.css">
+    <link rel="stylesheet" href="load.css">
 </head>
 <body>
+
+    <!-- <div id="load">
+        <div id="circle"></div>
+    </div>
+
+    <script>
+        //after window is loaded completely 
+        window.onload = function(){
+            //hide the preloader
+            document.getElementById('load').style.width=0.7*windowWidth;
+            document.getElementById('circle').style.display = 'none';
+        }
+    </script> -->
 
     
 
@@ -25,6 +39,7 @@
         <img style="width: 50vw; position: absolute; left: 25vw;top: 10vh;" src="imgs/hint_board2.png">
         <button id="hint-btn" onclick="hint_hide()" >OK</button>
     </div>
+
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>

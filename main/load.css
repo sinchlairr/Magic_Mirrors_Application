@@ -1,0 +1,229 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-wrapper h1{
+    color: #dad7cd;
+    position: absolute;
+    top: 70%;
+    left: 36%;
+    font-family: 'Proxima Nova';
+    font-weight: lighter;
+    font-size: 30px;
+    animation: blink 3s linear infinite;
+
+}
+
+@keyframes blink{
+    50%{
+        opacity: 20%;
+    }
+    80%{
+        opacity: 80%;
+    }
+}
+
+.spinner {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.spinner::before,
+.spinner:after{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+}
+
+.spinner:before {
+    width: 100%;
+    height: 100%;
+    background-image:linear-gradient(90deg, #7f5539 0%,#b08968 100% );
+    animation: spin 3s infinite linear;
+}
+.spinner:after {
+    width: 90%;
+    height: 90%;
+    background-image: url('files/imgs/img3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.main-content{
+    width: 100%;
+    height: 100vh;
+    background: url("https://source.unsplash.com/random/4000x4000") center no-repeat;
+    background-size: cover;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+.main_div{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display:grid;
+    place-items: center;
+
+
+}
+
+.center_div{
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+  
+}
+
+.rot{
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    top: -50%;
+    left: -50%;
+    border-right: 0.3rem solid #fff;
+    border-radius: 50%;
+    animation: rot 2s linear infinite;
+}
+
+
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+h1{
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+  
+} */
+
+#load{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+    height: 100vh;
+    width: 100vw;
+}
+
+#circle{
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid rgba(255,255,255,.1);
+    border-top: 10px solid rgb(2, 73, 0) ;
+    animation: anime 1.5s infinite linear;
+    background-image: url('imgs/monkey.png');
+}
+
+@keyframes anime {
+
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+    
+}
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+    
+}
+
+section .loader{
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+section .loader span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: rotate(calc(18deg * var(--i)));
+}
+
+section .loader span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: goldenrod;
+    box-shadow: 0 0 10px gold;
+    animation: animate 2s linear infinite;
+} */
+
+

@@ -14,8 +14,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Mirrors and I</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="load.css">
 </head>
 <body>
+    <embed name="GoodEnough" src="imgs/music.wav" loop="false" hidden="true" autostart="true">
+
+    <!-- <div class="load">
+        <div class="circle"></div>
+    </div>
+
+    <script>
+        //after window is loaded completely 
+        window.onload = function(){
+            //hide the preloader
+            document.querySelector(".load").style.display = "none";
+        }
+    </script> -->
 
     <style type="text/css">
         #warning-message { display: none; }
@@ -30,7 +44,7 @@
     
     <div id="wrapper">
            <!-- <audio id="tah_audio" src="imgs/front.mp3" loop="false"></audio> -->
-    <embed name="GoodEnough" src="imgs/music.wav" loop="false" hidden="true" autostart="true">
+    
     
         <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
