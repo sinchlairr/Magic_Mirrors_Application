@@ -4,6 +4,7 @@ let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
 window.onload = function() {
+    document.querySelector(".load").style.display = "none";
   var birdSound = new Audio('imgs/front.mp3');
   birdSound.loop = false;
   birdSound.play();

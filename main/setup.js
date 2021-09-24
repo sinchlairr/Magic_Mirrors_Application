@@ -22,6 +22,7 @@ function setup() {
     translate(2, 0, -0.05 * windowWidth);
     push();
     rotateY(22);
+    scale(-1, 1);
     // rotateX(2.7);
     // rotateZ(1.7);
   
@@ -40,7 +41,7 @@ function setup() {
    texture(vid);
   
    beginShape();
-  
+      
   
    
    //ye
@@ -88,6 +89,7 @@ function setup() {
     translate(0, 0, 20);
     push();
     rotateY(16);
+    
     rotateX(-0.8);
     rotateZ(-0.25);
   

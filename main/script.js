@@ -1,11 +1,14 @@
 
 window.onload=function(){
+        document.getElementById('load').style.width=0.7*windowWidth;
+        document.getElementById('circle').style.display = 'none';
           var birdSound = new Audio('imgs/music.wav');
         // birdSound.loop = false;
         birdSound.play();
 
         // document.getElementsByClassName('buttons').classList.toggle('reset');
         document.getElementById('btn_two').classList.toggle('select');
+
 }
 
 
