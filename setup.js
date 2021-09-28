@@ -24,13 +24,13 @@ const detectFaces = async() =>{
     // console.log(prediction);
     ctx.drawImage(video, 0 ,0 , 300, 300);
     base_image = new Image();
-    base_image.src = 'hats.png';
+    base_image.src = 'imgs/wand.png';
     
     prediction.forEach((pred) => {
         ctx.beginPath();
         ctx.lineWidth = "4";
         ctx.strokeStyle = "blue";
-        ctx.drawImage(base_image,pred.topLeft[0]-0.45*pred.topLeft[1],pred.topLeft[1]-0.9*pred.topLeft[1], 110, 100);
+        ctx.drawImage(base_image,pred.topLeft[0]-0*pred.topLeft[1],pred.topLeft[1]+0.1*pred.topLeft[1], 100, 110);
         // ctx.rect(
         //     pred.topLeft[0]-0.8*pred.topLeft[1],pred.topLeft[1]-pred.topLeft[1],
         //     // 5,5,
