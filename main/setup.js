@@ -139,6 +139,7 @@ function setup() {
     background(250);
     noStroke();
     texture(vid);
+    scale(-1, 1);
     plane(0.4*windowWidth, 0.83*windowHeight);
   }
   
