@@ -50,6 +50,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/addons/p5.sound.min.js"></script>
         <script defer src="face-api.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
         <script defer src="setup.js"></script>
@@ -57,8 +58,8 @@
      <!-- MIRROR DECOR -->
         <div id="mirror-div">
            
-            <video id="video" width="300px" height="300px" autoplay muted style="visibility: hidden; position: absolute;"></video>
-            <canvas id="canvas" width="300px" height="300px"></canvas>
+            <video id="video" width="300" height="300" autoplay muted style="visibility: hidden; position: absolute;"></video>
+            <canvas id="canvas" width="300" height="300"></canvas>
             <!-- <img style="width:53vw; height: 100vh; position: absolute; z-index: 200;" src="imgs/wooden_frame.png"> -->
             <img style="width:50vw; height: 100vh; position: absolute; z-index: 200; top: -2vh;" src="imgs/frame-4.png">
             <!-- <img style="z-index: 10; width:48vw; height: 15vh; position: absolute;" src="imgs/creep_1.png">

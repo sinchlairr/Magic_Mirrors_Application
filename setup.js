@@ -3,6 +3,10 @@ let model;
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
+
+// video.scale(-1,1);
+
+
 window.onload = function() {
     document.querySelector(".load").style.display = "none";
   var birdSound = new Audio('imgs/front.mp3');
@@ -22,6 +26,9 @@ const detectFaces = async() =>{
     const prediction = await model.estimateFaces(video, false);
 
     // console.log(prediction);
+    // ctx.scale(1,-1);
+    // ctx.translate(video.videoWidth, 0); 
+    // ctx.scale(-1, 1);
     ctx.drawImage(video, 0 ,0 , 300, 300);
     base_image = new Image();
     base_image.src = 'imgs/wand.png';

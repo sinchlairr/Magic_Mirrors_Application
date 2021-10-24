@@ -34,8 +34,24 @@ canvas {
   height: 85vh;
   left: 6vw;
   top: 10vh;
+  
 }
+/* canvas {
 
+
+  border-radius: 50px;
+  position: absolute;
+  z-index: 1;
+
+  width: 100vw;
+  left: 33vw;
+  top: 8vh;
+} */
+
+/* video {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(-1);
+} */
 #mirror-div{
     height: 97vh;
     width: 48vw;
