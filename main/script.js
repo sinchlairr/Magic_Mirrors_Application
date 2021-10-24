@@ -294,8 +294,8 @@ function small(){
   document.getElementById("rhyme_small").style.opacity=1;
   animation_disappear();
   document.getElementById("ball").style.opacity=1;
-  // document.getElementById("ball").style.animation = "roll 4s ease-in";
-  document.getElementById("ball").classList.toggle("active");
+  document.getElementById("ball").style.animation = "roll 4s ease-in";
+  // document.getElementById("ball").classList.toggle("active");
   
 
 }
