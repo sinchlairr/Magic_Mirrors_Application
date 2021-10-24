@@ -171,8 +171,8 @@ function animation_disappear(){
 }
 
 function reset_btn(){
-  document.getElementById('btn_two').style.opacity=1;
-  document.getElementById('btn_fat').style.opacity=0;
+  document.getElementById('btn_two').style.opacity=0;
+  document.getElementById('btn_fat').style.opacity=1;
   document.getElementById('btn_thin').style.opacity=1;
   document.getElementById('btn_tall').style.opacity=1;
   document.getElementById('btn_small').style.opacity=1;
@@ -224,7 +224,7 @@ function two(){
   all_false();
   rhyme_disappear();
   reset_btn();
-  document.getElementById('btn_two').style.opacity=0;
+  document.getElementById('btn_two').style.opacity=1;
   two_start=true;
   music();
   bgSound.pause();
@@ -262,7 +262,7 @@ function work_fat(){
     rhyme_disappear();
     reset_btn();
     bgSound.pause();
-    document.getElementById('btn_fat').style.opacity=1;
+    document.getElementById('btn_fat').style.opacity=0;
     fat_start=true;
     music();
     document.getElementById("text").style.opacity=0;
@@ -402,7 +402,7 @@ function windowResized() {
 
 function hint_hide(){
   document.getElementById("hint-screen").style.display='none';
-  fat_start=true;
+  two_start=true;
   music();
 }
 

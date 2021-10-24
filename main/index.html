@@ -89,7 +89,7 @@
             <span style="color: #c00202;">To see magic, you must shout</span><br>
             <span style="color: #860202;"><span style="color: #000000; font-size: 3vw;">PEEKABOO!!!!</span></span>
         </p>
-        <div id="rhyme_fat" >
+        <div id="rhyme_fat" style="opacity: 0;">
             <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Wriggle wriggle wriggle </span> <br> and adjust your hat 
                <br> <span>Maybe the magician in the mirror<br> magically got fat </span></p>
         </div>
@@ -114,7 +114,7 @@
                <br> <span>Hahahhaahah!<br> Doesn't the magician <br>look really funny? </span></p>
         </div>
 
-        <div id="rhyme_two" style="opacity: 0;">
+        <div id="rhyme_two">
             <p ><span style="font-family: 'Handylinedfont'; color: #020746;">Wipe Wipe Wipe</span> <br> the flap of the mirror to clear the view, 
                <br> <span>Is there <span style="color: #020746;">one </span>magician<br>or are there <span style="color: #020746;">two </span>?</span></p>
         </div>
@@ -139,29 +139,29 @@
 
 
         <!-- BUTTONS -->
-        <button class="buttons"   style=" position: absolute; left: 2vw; top: 86vh;  
-        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
-         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
-         background-position-y: -5px; background-size:cover; z-index: 10000;" onclick="two()" >two</button>
-
-
-
         <button class="buttons" id="btn_two"  style=" position: absolute; left: 2vw; top: 86vh;  
         background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
+         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
+         background-position-y: -5px; background-size:cover; z-index: 20000;" onclick="two()" >two</button>
+
+
+
+        <button class="buttons"  style=" position: absolute; left: 2vw; top: 86vh;  
+        background-color: transparent; border: 0; width: 5vw; height: 6vh; color: #fffde9;
         font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
-        background-position-y: -5px; background-size:cover; z-index: 20000;" onclick="two()">two</button>
+        background-position-y: -5px; background-size:cover; z-index: 10000;" onclick="two()">two</button>
 
          
-         <button class="buttons" id="btn_fat" style="position: absolute; left: 9vw; top: 86vh; z-index: 2000; 
+         <button class="buttons"  style="position: absolute; left: 9vw; top: 86vh; z-index: 2000; 
         background-color: transparent; border: 0; width: 5vw; height: 6vh; 
          font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/dark-wooden_button.png');
          background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="fat()" >fat</button>
          
          
-         <button class="buttons"  style="position: absolute; left: 9vw; top: 86vh; z-index: 1000; 
+         <button class="buttons" id="btn_fat" style="position: absolute; left: 9vw; top: 86vh; z-index: 1000; 
         background-color: transparent; border: 0; width: 5vw; height: 6vh; 
          font-size: 1.6vw; font-family: 'My Kids Handwritten';background-image: url('imgs/wood-button.png');
-         background-position-y: -5px; background-size:cover;color: #fffde9;" onclick="fat()" >fat</button>
+         background-position-y: -5px; background-size:cover;color: #fffde9;z-index: 20000;" onclick="fat()" >fat</button>
 
 
 
