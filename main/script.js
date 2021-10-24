@@ -231,8 +231,10 @@ function two(){
   document.getElementById("text").style.opacity=0;
   document.getElementById("rhyme_two").style.opacity=1;
   animation_disappear()
-  document.getElementById("wipe").classList.toggle("active");
+  // document.getElementById("wipe").classList.toggle("active");
+
   document.getElementById("wipe").style.opacity=1;
+  document.getElementById("wipe").style.animation = "wipe 10s ease-in";
 }
 
 function work_two(){
@@ -290,8 +292,9 @@ function small(){
   music();
   document.getElementById("text").style.opacity=0;
   document.getElementById("rhyme_small").style.opacity=1;
-  animation_disappear()
+  animation_disappear();
   document.getElementById("ball").style.opacity=1;
+  // document.getElementById("ball").style.animation = "roll 4s ease-in";
   document.getElementById("ball").classList.toggle("active");
   
 
@@ -402,6 +405,8 @@ function windowResized() {
 
 function hint_hide(){
   document.getElementById("hint-screen").style.display='none';
+  // document.getElementById("wipe").classList.toggle("active");
+  document.getElementById("wipe").style.animation = "wipe 10s ease-in";
   two_start=true;
   music();
 }
