@@ -12,8 +12,15 @@ let ctx = canvas.getContext("2d");
 
 
 window.onload = function() {
+    
     document.querySelector(".load").style.display = "none";
   // document.getElementById("tah_audio").play();
+
+
+    // document.getElementsByClassName('buttons').classList.toggle('reset');
+    // document.getElementById('btn_two').classList.toggle('select');
+
+
 }
 
 
