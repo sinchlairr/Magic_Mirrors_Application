@@ -6,9 +6,9 @@ let ctx = canvas.getContext("2d");
 
 // video.scale(-1,1);
 
-var birdSound = new Audio('imgs/front.mp3');
-birdSound.loop = false;
-birdSound.play();
+// var birdSound = new Audio('imgs/front.mp3');
+// birdSound.loop = false;
+// birdSound.play();
 
 
 window.onload = function() {
